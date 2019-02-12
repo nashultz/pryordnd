@@ -1,0 +1,29 @@
+@import "remodal/src/remodal";
+@import "remodal/src/remodal-default-theme";
+
+.remodal {
+  max-width: rem-calc(800);
+  border-radius: $global-radius;
+  text-align: left;
+  border-radius: $global-radius;
+
+  &-overlay {
+    z-index: z(modal);
+  }
+
+  &-wrapper {
+    z-index: z(modal) + 1;
+  }
+
+  &-overlay {
+    background: transparentize($color: get-color(primary), $amount: .1);
+  }
+
+  &-close {
+    left: calc(100% - 35px);
+  }
+
+  &.grid-width {
+    max-width: $global-width;
+  }
+}

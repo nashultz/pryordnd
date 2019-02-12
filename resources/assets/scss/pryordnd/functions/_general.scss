@@ -1,0 +1,9 @@
+@function get-color($key) {
+  @if map-has-key($foundation-palette, $key) {
+    @return map-get($foundation-palette, $key);
+  }
+  @else {
+    @warn 'given $key is not available in $foundation-palette';
+    @return $key;
+  }
+}
